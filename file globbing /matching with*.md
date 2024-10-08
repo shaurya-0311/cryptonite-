@@ -22,7 +22,7 @@ hacker@globbing~matching-with-:/challenge$
 ```
 
 # Matching with []
-The square brackes are, essentially, a limited form of ?, in that instead of matching any character, [] is a wildcard for some subset of potential characters
+The square brackes are, essentially, a limited form of ?, in that instead of matching any character, [] is a wildcard for some subset of potential characters so we make a single argument that bracket globs into the files file_b file_a file_s file_h
 ```bash
 Connected!
 hacker@globbing~matching-with-:~$ cd /challenge/files
@@ -33,6 +33,7 @@ hacker@globbing~matching-with-:/challenge/files$
 ```
 
 # matching paths with []
+there are some files in /challenge/files and we have to start from our home directory and run /challenge/run with a single arhument that hglobs into absolute path of files file_b file_a file_s file_h
 ```bash
 Connected!
 hacker@globbing~matching-paths-with-:~$ cd ~
@@ -42,6 +43,7 @@ pwn.college{w8si5TZIpYFJxmQ0N1EE_xMxfu7.dRjM4QDL0AjN0czW}
 hacker@globbing~matching-paths-with-:~$
 ```
 # mixing globs 
+using all the knowledge we've gained so far we use we have to write a single short glob less than equal to 6 characters that globs into files "challenging", "educational", and "pwning"
 ```bash
 Connected!
 hacker@globbing~mixing-globs:~$ cd /challenge/files
@@ -53,6 +55,7 @@ hacker@globbing~mixing-globs:/challenge/files$
 
 
 # exclusionary-globbing
+
 ```bash
 Connected!
 hacker@globbing~exclusionary-globbing:~$ cd /challenge/files
