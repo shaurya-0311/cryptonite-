@@ -25,9 +25,21 @@ pwn.college{Iw5T7KgRUm_BFe2gcf_F_5fr4dL.dJzNyUDL0AjN0czW}
 ```
 
 # changong perissions 
+here file /flag is not made readable to us therefre we must chmod command along with u+r to make it readable,a+r adds read access to the user's permissions
 ```bash
 hacker@permissions~changing-permissions:~$ chmod a+r /flag
 hacker@permissions~changing-permissions:~$ cat /flag
 pwn.college{0TU_WSxz63jQs3jkVkRDeCSbcRl.dNzNyUDL0AjN0czW}
 hacker@permissions~changing-permissions:~$
 ```
+
+# executable files
+```
+hacker@permissions~executable-files:~$ chmod u+x /challenge/run
+hacker@permissions~executable-files:~$ /challenge/run
+Successful execution! Here is your flag:
+pwn.college{EHJjIMblgxuO0N4hu2CWBDK8dM7.dJTM2QDL0AjN0czW}
+hacker@permissions~executable-files:~$
+```
+
+#
