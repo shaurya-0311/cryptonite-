@@ -268,3 +268,5 @@ hacker@permissions~permission-tweaking-practice:~$ cat /flag
 pwn.college{cUhHI8QRaT1QpgPoggnZ95Doba8.dBTM2QDL0AjN0czW}
 hacker@permissions~permission-tweaking-practice:~$
 ```
+
+#
