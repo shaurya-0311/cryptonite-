@@ -177,3 +177,50 @@ hacker@piping~grepping-errors:~$ /challenge/run 2>&1 | grep pwn.college
 pwn.college{M1FJEVxEfoyoqRpsUmDUU7wI743.dVDM5QDL0AjN0czW}
 hacker@piping~grepping-errors:~$
 ```
+
+# duplicating-piped-data-with-tee
+
+```bash
+Connected!
+hacker@piping~duplicating-piped-data-with-tee:~$ /challenge/pwn | tee pwn_output | /challenge/college
+Processing...
+WARNING: you are overwriting file pwn_output with tee's output...
+The input to 'college' does not contain the correct secret code! This code
+should be provided by the 'pwn' command. HINT: use 'tee' to intercept the
+output of 'pwn' and figure out what the code needs to be.
+hacker@piping~duplicating-piped-data-with-tee:~$ cat pwn_output
+Usage: /challenge/pwn --secret [SECRET_ARG]
+
+SECRET_ARG should be "8hcatYW3"
+hacker@piping~duplicating-piped-data-with-tee:~$ /challenge/pwn --secret 8hcatYW3 | /challenge/college
+Processing...
+Correct! Passing secret value to /challenge/college...
+Great job! Here is your flag:
+pwn.college{8hcatYW31Ck3vrY3tqRyhylvLWB.dFjM5QDL0AjN0czW}
+hacker@piping~duplicating-piped-data-with-tee:~$
+```
+
+# writing-to-multiple-programs
+
+```bash
+Connected!
+hacker@piping~writing-to-multiple-programs:~$ /challenge/hack | tee >( /challenge/the ) >( /challenge/planet )
+This secret data must directly and simultaneously make it to /challenge/the and
+/challenge/planet. Don't try to copy-paste it; it changes too fast.
+2100938961773524257
+Congratulations, you have duplicated data into the input of two programs! Here
+is your flag:
+pwn.college{omvS7wEOeHmSFrMd7vgo5wmNyXd.dBDO0UDL0AjN0czW}
+hacker@piping~writing-to-multiple-programs:~$
+```
+
+# split-piping-stderr-and-stdout
+
+```bash
+Connected!
+hacker@piping~split-piping-stderr-and-stdout:~$ /challenge/hack > >( /challenge/planet ) 2> >( /challenge/the )
+Congratulations, you have learned a redirection technique that even experts
+struggle with! Here is your flag:
+pwn.college{Eseh96esQfC6-y2R7t-L-VCPsMI.dFDNwYDL0AjN0czW}
+hacker@piping~split-piping-stderr-and-stdout:~$
+```
